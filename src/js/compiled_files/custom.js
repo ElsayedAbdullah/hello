@@ -175,4 +175,12 @@ $(document).ready(function () {
       $(this).toggleClass("d-none");
     });
   });
+
+
+  // -----Country Code Selection
+  $("#mobile_code,#mobile_code2").intlTelInput({
+    initialCountry: "in",
+    separateDialCode: true
+  });
+  
 });
