@@ -556,6 +556,11 @@ input:focus {
       transition: 0.3s;
       width: 32%;
 
+      svg {
+        width: 100%;
+        height: auto;
+      }
+
       &:hover {
         opacity: 0.75;
       }
