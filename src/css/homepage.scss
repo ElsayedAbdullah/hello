@@ -2,8 +2,10 @@
 @import "sass/global_styles/global";
 @import "sass/global_styles/header";
 @import "sass/global_styles/footer";
+@import "sass/commonSections/iti";
+@import "sass/commonSections/flickity";
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
 // GLOBAL STYLES
 
 * {
@@ -11,7 +13,6 @@
   margin: 0;
   padding: 0;
 }
-
 
 body {
   font-weight: normal;
@@ -61,14 +62,14 @@ h6 {
 .main-btn:link {
   background: #2c2ffe;
   color: #fff;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    background: #1E21E5;
+    background: #1e21e5;
   }
 
   &:active {
-    background: #494CFF;
+    background: #494cff;
   }
 }
 
@@ -141,7 +142,7 @@ input:focus {
 
   .download-apps {
     position: fixed;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: -33px 0px 90px rgba(76, 76, 108, 0.2);
     border-radius: 25px 0px 0px 25px;
     width: 426px;
@@ -152,14 +153,14 @@ input:focus {
     right: 0;
     padding: 60px 40px;
     transform: translateX(100%);
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
 
     &.active {
       transform: translateX(0);
     }
 
     .close {
-      background: #DDF1F6;
+      background: #ddf1f6;
       width: 48px;
       height: 48px;
       border-radius: 50%;
@@ -191,7 +192,7 @@ input:focus {
     }
 
     .box-download {
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 0px 4px 30px rgba(76, 76, 108, 0.15);
       border-radius: 15px;
       padding: 16px 16px 16px 24px;
@@ -214,6 +215,22 @@ input:focus {
   }
 }
 
+.navbar-nav {
+  span.flag {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+
+  .bg-sa {
+    background: url("../imgs/langs_flags.png") -10px -10px;
+  }
+
+  .bg-us {
+    background: url("../imgs/langs_flags.png") -50px -10px;
+  }
+}
+
 .navbar {
   padding: 34px 0;
 
@@ -221,7 +238,7 @@ input:focus {
     background: #fff;
   }
 
-  >.container {
+  > .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -301,8 +318,6 @@ input:focus {
     }
   }
 
-
-
   // Menu toggle button
   .hamburger .line {
     width: 22px;
@@ -329,7 +344,6 @@ input:focus {
   }
 
   @keyframes smallbig {
-
     0%,
     100% {
       transform: scale(1);
@@ -433,10 +447,6 @@ input:focus {
       }
     }
 
-    img {
-      margin-right: 6px;
-    }
-
     &.active {
       background: #f5f9fb;
       position: relative;
@@ -524,7 +534,6 @@ input:focus {
         opacity: 0.75;
       }
     }
-
   }
 
   .image img {
@@ -671,7 +680,7 @@ input:focus {
     box-shadow: 0px 33px 90px rgba(76, 76, 108, 0.1);
     border-radius: 25px;
     padding: 48px 32px;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
 
     &:hover {
       box-shadow: 0px 33px 90px rgba(76, 76, 108, 0.18);
@@ -716,7 +725,6 @@ input:focus {
 .contact-widget,
 .contact-details,
 .smart-options {
-
   p,
   li {
     font-size: 24px;
@@ -917,7 +925,6 @@ input:focus {
         z-index: 10;
       }
 
-
       @media #{$betweentabdesk} {
         padding: 50px 24px 30px;
       }
@@ -966,8 +973,6 @@ input:focus {
             margin-bottom: 6px;
           }
         }
-
-
       }
 
       &:not(:last-child) {
@@ -989,16 +994,15 @@ input:focus {
 
         &:hover {
           .subscribe-btn {
-            background: #D3D4FB;
+            background: #d3d4fb;
           }
         }
 
         &:active {
           .subscribe-btn {
-            background: #EDEEFF;
+            background: #edeeff;
           }
         }
-
       }
 
       &.six-months-plan {
@@ -1011,13 +1015,13 @@ input:focus {
 
         &:hover {
           .subscribe-btn {
-            background: #FDD0C4;
+            background: #fdd0c4;
           }
         }
 
         &:active {
           .subscribe-btn {
-            background: #FFEFEB;
+            background: #ffefeb;
           }
         }
       }
@@ -1032,13 +1036,13 @@ input:focus {
 
         &:hover {
           .subscribe-btn {
-            background: #FADEB3;
+            background: #fadeb3;
           }
         }
 
         &:active {
           .subscribe-btn {
-            background: #FFF1DA;
+            background: #fff1da;
           }
         }
       }
@@ -1053,13 +1057,13 @@ input:focus {
 
         &:hover {
           .subscribe-btn {
-            background: #D9C8FB;
+            background: #d9c8fb;
           }
         }
 
         &:active {
           .subscribe-btn {
-            background: #F2EBFF;
+            background: #f2ebff;
           }
         }
       }
@@ -1172,7 +1176,7 @@ input:focus {
       padding: 14px;
       text-align: center;
       border-radius: 7px;
-      transition: .2s ease-in-out;
+      transition: 0.2s ease-in-out;
 
       @media #{$maxTab} {
         padding: 10px;
@@ -1208,7 +1212,7 @@ input:focus {
     align-items: center;
     width: 60%;
 
-    @media(min-width: 768px) and (max-width: 1200px) {
+    @media (min-width: 768px) and (max-width: 1200px) {
       width: 50%;
       padding-right: 20px;
     }
@@ -1258,7 +1262,6 @@ input:focus {
     display: flex;
     align-items: center;
     margin-right: 30px;
-
 
     @media (max-width: 1200px) {
       display: none;
@@ -1503,7 +1506,7 @@ input:focus {
       line-height: 30px;
       text-align: center;
       text-decoration-line: underline;
-      color: #2C2FFE;
+      color: #2c2ffe;
       border: 0;
       background: none;
     }
@@ -1568,7 +1571,7 @@ footer {
         font-size: 15px;
       }
 
-      &~p {
+      & ~ p {
         font-size: 20px;
 
         @media (min-width: 768px) and (max-width: 1200px) {
@@ -1594,12 +1597,12 @@ footer {
 
         a {
           display: block;
-          color: #474C4D;
-          transition: all .2s ease-in-out;
+          color: #474c4d;
+          transition: all 0.2s ease-in-out;
 
           &:hover {
             text-decoration: underline;
-            color: #2C2FFE;
+            color: #2c2ffe;
           }
 
           &.app-btn {
@@ -1649,25 +1652,24 @@ footer {
         border-bottom: 1px solid #eeeef5;
       }
 
-      >li {
+      > li {
         position: relative;
 
         &:not(:last-of-type) {
           margin-right: 15px;
         }
 
-        >a {
+        > a {
           width: 28px;
           height: 28px;
           border-radius: 50%;
           background: #dfe0ff;
           display: flex;
-          transition: .2s ease-in-out;
+          transition: 0.2s ease-in-out;
 
           &:hover {
-            background: #D3D4FB;
+            background: #d3d4fb;
           }
-
 
           svg {
             margin: auto;
