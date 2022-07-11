@@ -114,16 +114,16 @@ $(document).ready(function () {
   });
 
   // language dropdown
-  // $(".dropdown-menu a").on("click", function () {
-  //   $(this)
-  //     .addClass("active")
-  //     .parent()
-  //     .siblings()
-  //     .find("a")
-  //     .removeClass("active");
-  //   $(".language-dropdown .lang").html($(this).html());
-  //   // $('.dropdown-menu').removeClass('show')
-  // });
+  $(".dropdown-menu a").on("click", function () {
+    $(this)
+      .addClass("active")
+      .parent()
+      .siblings()
+      .find("a")
+      .removeClass("active");
+    // $(".language-dropdown .lang").html($(this).html());
+    $('.dropdown-menu').removeClass('show')
+  });
 
   // $('.login').on('click', function() {
   //   $('.download-apps').addClass('active')
@@ -174,13 +174,6 @@ $(document).ready(function () {
     $(".reviews .hidden-item").each(function () {
       $(this).toggleClass("d-none");
     });
-  });
-
-
-  // -----Country Code Selection
-  $("#mobile_code,#mobile_code2").intlTelInput({
-    initialCountry: "in",
-    separateDialCode: true
   });
   
 });

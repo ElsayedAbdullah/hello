@@ -7,6 +7,33 @@
 
 // GLOBAL STYLES
 
+/* arabic */
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+/* arabic */
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+/* arabic */
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
 @font-face {
   font-family: "Cairo";
   font-style: normal;
@@ -153,14 +180,12 @@ input:focus {
 
 // MAIN NAVIGATION
 .homepage-header {
-  background-image: url(../imgs/homepage/homepage-hero-bg.webp);
   background-color: #ecfbff;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  // @media (min-width: 1900px) {
-  //   height: 100vh;
-  // }
+  @media (min-width: 992px) {
+    background-image: url(../imgs/homepage/homepage-hero-bg.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   @media (min-width: 2000px) {
     height: 768px;
@@ -242,7 +267,7 @@ input:focus {
 }
 
 .navbar-nav {
-  span.flag {
+  img.flag {
     width: 20px;
     height: 20px;
     margin-right: 6px;
@@ -433,6 +458,10 @@ input:focus {
   opacity: 0;
   visibility: hidden;
 
+  &#dropdown-menu2 {
+    bottom: 100%;
+  }
+
   &.mb-screen {
     @media #{$maxTab} {
       background: #f5f9fb;
@@ -509,14 +538,14 @@ input:focus {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 100px 0 20px;
+  padding: 60px 0;
 
   @media #{$betweentabdesk} {
     padding: 50px 0 20px;
   }
 
-  @media #{$tablet} {
-    padding: 130px 0 50px;
+  @media #{$maxTab} {
+    padding: 120px 0 60px;
   }
 
   @media (min-width: 992px) {
@@ -549,7 +578,7 @@ input:focus {
 
   .app-btns {
     @media (min-width: 1400px) {
-      width: 85%;
+      width: 80%;
     }
 
     a {
@@ -633,6 +662,19 @@ input:focus {
   }
 }
 
+.iti__arrow {
+  background-image: url(../imgs/arrow.svg);
+  border: 0;
+  width: 11px;
+  height: 7px;
+  background-repeat: no-repeat;
+  transition: 0.2s ease-in-out;
+}
+
+.iti__arrow--up {
+  transform: rotate(180deg);
+}
+
 .iti--allow-dropdown .iti__flag-container,
 .iti--separate-dial-code .iti__flag-container {
   @media #{$maxTab} {
@@ -645,6 +687,11 @@ input:focus {
 .iti--separate-dial-code .iti__selected-dial-code {
   color: $primaryColor;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+  @media #{$mobile} {
+    font-size: 15px;
+  }
 }
 
 .form-group {
@@ -652,7 +699,9 @@ input:focus {
   box-shadow: 0px 12px 50px rgba(76, 76, 108, 0.15);
   border-radius: 79px;
   padding: 8px;
-  max-width: 520px;
+  @media (min-width: 1400px) {
+    max-width: 520px;
+  }
 
   @media #{$maxTab} {
     background: none;

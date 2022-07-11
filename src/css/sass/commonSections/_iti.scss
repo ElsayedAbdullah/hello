@@ -64,10 +64,10 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-.iti__country-list--dropup {
-  bottom: 100%;
-  margin-bottom: -1px;
-}
+// .iti__country-list--dropup {
+//   bottom: 100%;
+//   margin-bottom: -1px;
+// }
 @media (max-width: 500px) {
   .iti__country-list {
     white-space: normal;
