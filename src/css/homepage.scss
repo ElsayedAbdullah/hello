@@ -3,6 +3,7 @@
 @import "sass/global_styles/header";
 @import "sass/global_styles/footer";
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 // GLOBAL STYLES
 
 * {
@@ -10,6 +11,7 @@
   margin: 0;
   padding: 0;
 }
+
 
 body {
   font-weight: normal;
@@ -126,6 +128,8 @@ input:focus {
 .homepage-header {
   background-image: url(../imgs/homepage/homepage-hero-bg.webp);
   background-color: #ecfbff;
+  background-repeat: no-repeat;
+  background-position: center;
 
   // @media (min-width: 1900px) {
   //   height: 100vh;
