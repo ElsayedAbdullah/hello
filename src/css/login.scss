@@ -1,0 +1,330 @@
+@import "sass/commonSections/iti";
+@import "sass/global_styles/bootstrap-classes";
+@import "sass/global_styles/global";
+
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 40px;
+  position: relative;
+  @media #{$tablet} {
+    padding: 24px;
+  }
+
+  @media #{$mobile} {
+    flex-direction: column;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .welcome-section {
+    background-image: url(../imgs/login/sidebar-bg.svg);
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    flex-direction: column;
+
+    @media #{$mobile} {
+      width: 100%;
+      border-radius: 0;
+      height: auto;
+      padding: 25px;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 16px;
+
+      @media #{$mobile} {
+        margin-bottom: 6px;
+        font-size: 14px;
+      }
+    }
+
+    .logo {
+      @media #{$maxTab} {
+        height: 40px;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    background: #ddf1f6;
+    border: 0;
+    cursor: pointer;
+
+    @media #{$mobile} {
+      width: 32px;
+      height: 32px;
+      top: 20px;
+      right: 20px;
+    }
+
+    svg {
+      margin: auto;
+
+      @media #{$mobile} {
+        width: 12px;
+        height: auto;
+      }
+    }
+  }
+
+  .login-content {
+    max-width: 515px;
+    margin: auto;
+
+    @media #{$betweentabdesk} {
+      max-width: 450px;
+    }
+    @media #{$tablet} {
+      max-width: 350px;
+    }
+
+    @media #{$mobile} {
+      padding: 40px 20px 20px;
+      margin: unset;
+      height: 100%;
+      .login-form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    h2 {
+      font-size: 48px;
+      color: #000000;
+      margin-bottom: 24px;
+      @media #{$tablet} {
+        font-size: 32px;
+      }
+      @media #{$mobile} {
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+    }
+
+    h2 + p {
+      font-size: 24px;
+
+      @media #{$tablet} {
+        font-size: 20px;
+      }
+      @media #{$mobile} {
+        font-size: 17px;
+      }
+    }
+
+    .divider {
+      margin: 32px 0;
+      width: 36px;
+      background-color: #d9d9d9;
+      height: 1px;
+
+      @media #{$mobile} {
+        margin: 24px 0;
+      }
+    }
+
+    .divider + p {
+      font-size: 20px;
+      color: #000000;
+      margin-bottom: 16px;
+      @media #{$tablet} {
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 16px;
+        color: #c8102e;
+        display: none;
+      }
+
+      @media #{$mobile} {
+        margin-bottom: 8px;
+        font-size: 15px;
+      }
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      padding: 12px 19px;
+      line-height: 1.4;
+      border: 0;
+      font-size: 18px;
+      line-height: 32px;
+      background: none;
+      font-family: "Cairo", sans-serif;
+      @media #{$mobile} {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      &::placeholder {
+        color: #777c80;
+      }
+    }
+
+    .form-control:focus {
+      color: #000;
+      outline: 0;
+    }
+
+    .form-group {
+      background: #ffffff;
+      border: 1px solid #ebf0f2;
+      box-shadow: 0px 3px 6px rgba(76, 76, 108, 0.05);
+      border-radius: 11px;
+      padding: 4px;
+      @media #{$mobile} {
+        padding: 0;
+      }
+    }
+
+    .iti--separate-dial-code .iti__selected-flag {
+      border-radius: 7px;
+    }
+
+    .send-otp {
+      width: 100%;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 28px;
+      line-height: 56px;
+      margin-top: 20px;
+      transition: 0s;
+
+      &.loading {
+        background: #7b7dff;
+        color: rgba(#fff, 0.6);
+        padding-left: 40px;
+      }
+
+      &.loading .spinner {
+        position: relative;
+        border-radius: 100%;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-left-color: #fff;
+        border-top-color: #fff;
+        animation: spin 0.6s infinite linear;
+        top: -2px;
+        opacity: 0.6;
+        width: 22px;
+        height: 22px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(359deg);
+        }
+      }
+
+      // @keyframes grow {
+      // 	to {
+      // 		width: 22px;
+      // 		height: 22px;
+      // 		right: 10px;
+      // 	}
+      // }
+    }
+
+    .tel {
+      color: #2c2ffe;
+      display: block;
+    }
+  }
+
+  .verify-btn {
+    display: block;
+    width: 100%;
+    line-height: 56px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    &:disabled {
+      background: #7B7DFF;
+      color: rgba(#fff, .6);
+    }
+  }
+
+  .otp-form input {
+    display: inline-block;
+    width: 15%;
+    height: 72px;
+    text-align: center;
+    background: #f0f5f7;
+    border-radius: 11px;
+    border: 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    color: #2c2ffe;
+    &.valid {
+      background: #ffffff;
+      border: 2px solid #2c2ffe;
+      box-shadow: 0px 8px 10px rgba(44, 47, 254, 0.1);
+    }
+    &.input-error {
+      background: #ffffff;
+      border: 2px solid #c8102e;
+      box-shadow: 0px 8px 10px rgba(44, 47, 254, 0.1);
+    }
+    @media #{$mobile} {
+      width: 13%;
+      height: 40px;
+      font-size: 17px;
+      line-height: 27px;
+      border-radius: 6px;
+    }
+  }
+
+  .otp-content {
+    display: none;
+    flex-direction: column;
+    @media #{$mobile} {
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  .otp-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .receive-code {
+    font-size: 18px;
+    margin-top: 24px;
+    text-align: center;
+    @media #{$mobile} {
+      margin-top: 18px;
+      font-size: 15px;
+    }
+
+    a {
+      color: #2c2ffe;
+      text-decoration: underline;
+    }
+  }
+}
