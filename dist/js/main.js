@@ -128,7 +128,7 @@ $(document).ready(function () {
   // otp
   // Restricts input for the set of matched elements to the given inputFilter function.
   (function ($) {
-    $.fn.inputFilter = function (callback, errMsg) {
+    $.fn.inputFilter = function (callback) {
       return this.on("input keydown keyup mousedown mouseup select contextmenu drop focusout", function (e) {
         if (callback(this.value)) {
           // Accepted value
@@ -176,7 +176,7 @@ $(document).ready(function () {
           if (prev.length) {
             $(prev).select();
           }
-        } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode >= 7 && e.keyCode <= 16) || e.keyCode === 39) {
+        } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode == 229) || e.keyCode === 39) {
           var next = parent.find("input#" + $(this).data("next"));
 
           $(this).addClass("valid");
@@ -196,15 +196,15 @@ $(document).ready(function () {
           }
         }
       })
-      .on('keyup', function() {
-        var lastInput = $(".otp-form").find("input").last();
-        if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
-          $(".verify-btn").attr("disabled", false);
-        }
-        if (this.value.length == this.maxLength) {
-          $(this).next('input').focus();
-        }
-      });
+      // .on('keyup', function() {
+      //   var lastInput = $(".otp-form").find("input").last();
+      //   if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
+      //     $(".verify-btn").attr("disabled", false);
+      //   }
+      //   if (this.value.length == this.maxLength) {
+      //     $(this).next('input').focus();
+      //   }
+      // });
     });
 
   $("#resend-again").click(function () {
