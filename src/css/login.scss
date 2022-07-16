@@ -17,6 +17,9 @@
     flex-direction: column;
     padding: 0;
     justify-content: flex-start;
+    min-height: -webkit-fill-available;
+    position: fixed;
+    height: 100%;
   }
 
   .welcome-section {
