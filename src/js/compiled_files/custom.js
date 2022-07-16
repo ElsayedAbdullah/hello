@@ -192,14 +192,16 @@ $(document).ready(function () {
           }
         }
       })
-      .on('keyup', function() {
-        var lastInput = $(".otp-form").find("input").last();
-        if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
-          $(".verify-btn").attr("disabled", false);
+      .on('keydown', function() {
+        if(e.which === 9) {
+          var lastInput = $(".otp-form").find("input").last();
+          if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
+            $(".verify-btn").attr("disabled", false);
+          }
         }
-        if (this.value.length == this.maxLength) {
-          $(this).next('input').focus();
-        }
+        // if (this.value.length == this.maxLength) {
+        //   $(this).next('input').focus();
+        // }
       });
     });
 
