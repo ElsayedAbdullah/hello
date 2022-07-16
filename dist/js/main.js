@@ -197,12 +197,12 @@ $(document).ready(function () {
         }
       })
       .on('keyup', function() {
+        var lastInput = $(".otp-form").find("input").last();
+        if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
+          $(".verify-btn").attr("disabled", false);
+        }
         if (this.value.length == this.maxLength) {
           $(this).next('input').focus();
-          var lastInput = $(".otp-form").find("input").last();
-          if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
-            $(".verify-btn").attr("disabled", false);
-          }
         }
       });
     });

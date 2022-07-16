@@ -272,7 +272,7 @@
 
   .otp-form input {
     display: inline-block;
-    width: 15%;
+    width: calc(100% / 6 - 16px);;
     height: 72px;
     text-align: center;
     background: #f0f5f7;
@@ -294,7 +294,7 @@
       box-shadow: 0px 8px 10px rgba(44, 47, 254, 0.1);
     }
     @media #{$mobile} {
-      width: 13%;
+      width: calc(100% / 6 - 8px);
       height: 40px;
       font-size: 17px;
       line-height: 27px;
