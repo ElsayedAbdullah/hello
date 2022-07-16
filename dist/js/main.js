@@ -176,7 +176,7 @@ $(document).ready(function () {
           if (prev.length) {
             $(prev).select();
           }
-        } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+        } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode >= 7 && e.keyCode <= 16) || e.keyCode === 39) {
           var next = parent.find("input#" + $(this).data("next"));
 
           $(this).addClass("valid");
@@ -196,16 +196,14 @@ $(document).ready(function () {
           }
         }
       })
-      .on('keydown', function() {
-        if(e.which === 9) {
-          var lastInput = $(".otp-form").find("input").last();
-          if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
-            $(".verify-btn").attr("disabled", false);
-          }
+      .on('keyup', function() {
+        var lastInput = $(".otp-form").find("input").last();
+        if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
+          $(".verify-btn").attr("disabled", false);
         }
-        // if (this.value.length == this.maxLength) {
-        //   $(this).next('input').focus();
-        // }
+        if (this.value.length == this.maxLength) {
+          $(this).next('input').focus();
+        }
       });
     });
 
