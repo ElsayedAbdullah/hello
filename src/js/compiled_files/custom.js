@@ -170,7 +170,7 @@ $(document).ready(function () {
           $(".verify-btn").attr("disabled", true);
 
           if (prev.length) {
-            $(prev).focus();
+            $(prev).select();
           }
         } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
           var next = parent.find("input#" + $(this).data("next"));
@@ -178,7 +178,7 @@ $(document).ready(function () {
           $(this).addClass("valid");
           if ($(this).val()) {
             if (next.length) {
-              $(next).focus();
+              $(next).select();
             } else {
               if (parent.data("autosubmit")) {
                 var lastInput = $(".otp-form").find("input").last();
@@ -195,6 +195,10 @@ $(document).ready(function () {
       .on('keyup', function() {
         if (this.value.length == this.maxLength) {
           $(this).next('input').focus();
+          var lastInput = $(".otp-form").find("input").last();
+          if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
+            $(".verify-btn").attr("disabled", false);
+          }
         }
       });
     });
