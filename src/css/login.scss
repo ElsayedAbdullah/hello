@@ -9,6 +9,7 @@
   height: 100vh;
   padding: 40px;
   position: relative;
+  
   @media #{$tablet} {
     padding: 24px;
   }
@@ -20,6 +21,8 @@
     min-height: -webkit-fill-available;
     position: fixed;
     height: 100%;
+    width: 100%;
+    overflow: auto;
   }
 
   .welcome-section {
@@ -210,7 +213,6 @@
       width: 100%;
       font-weight: 700;
       font-size: 15px;
-      line-height: 28px;
       line-height: 56px;
       margin-top: 20px;
       transition: 0s;

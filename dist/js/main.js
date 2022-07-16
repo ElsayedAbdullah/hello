@@ -84,17 +84,17 @@ $(document).ready(function () {
   // -----Country Code Selection
   var telInput = $("#mobile_code_login");
   telInput.intlTelInput({
-    initialCountry: "in",
     separateDialCode: true,
     preventInvalidNumbers: true,
     initialCountry: "eg",
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
   });
 
+
   $(".login-wrapper .login-form").on("submit", function (e) {
     e.preventDefault();
     var inputvalue = $("#mobile_code_login").val();
-    $("#tel").text(inputvalue);
+    $("#tel").text(`"+${telInput.intlTelInput('getSelectedCountryData').dialCode} ${inputvalue}"`);
     if (inputvalue != "" && telInput.intlTelInput("isValidNumber")) {
       $(this).find(".send-otp").addClass("loading").html("<span class='spinner mr-2'></span><span>Sending OTP...</span>");
       setTimeout(() => {
@@ -118,7 +118,6 @@ $(document).ready(function () {
       if (seconds > 0) {
         setTimeout(tick, 1000);
       } else {
-        $(".verify-btn").attr("disabled", true);
         $("#resend-counter").hide();
         $("#resend-again").show();
       }
