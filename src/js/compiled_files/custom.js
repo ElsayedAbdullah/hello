@@ -26,15 +26,15 @@ $(document).ready(function () {
     $(".dropdown-menu").removeClass("show");
   });
 
-  // $('.login').on('click', function() {
-  //   $('.download-apps').addClass('active')
-  //   $("body").addClass("overlay");
-  // })
+  $('.download-app').on('click', function() {
+    $('.download-apps').addClass('active')
+    $("body").addClass("overlay");
+  })
 
-  // $('.download-apps .close').on('click', function() {
-  //   $('.download-apps').removeClass('active')
-  //   $("body").removeClass("overlay");
-  // })
+  $('.download-apps .close').on('click', function() {
+    $('.download-apps').removeClass('active')
+    $("body").removeClass("overlay");
+  })
 
   // menu toggle in navbar
   $(".hamburger").click(function () {

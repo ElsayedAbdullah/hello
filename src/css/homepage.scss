@@ -7,7 +7,6 @@
 
 // GLOBAL STYLES
 
-
 // MAIN NAVIGATION
 .homepage-header {
   background-color: #ecfbff;
@@ -187,7 +186,8 @@
     }
   }
 
-  .login {
+  .login,
+  .download-app {
     border-radius: 7px;
     font-weight: 700;
     font-size: 15px;
@@ -406,54 +406,54 @@
     }
   }
 
-  .app-btns {
-    @media (min-width: 1400px) {
-      width: 80%;
-    }
-
-    a {
-      transition: 0.3s;
-      width: 32%;
-
-      svg {
-        width: 100%;
-        height: auto;
-      }
-      // &.app-store-btn {
-      //   position: relative;
-      //   z-index: 1;
-      //   &:after {
-      //     content: "COMING SOON...";
-      //     background: #4f4f4f;
-      //     border-radius: 9px;
-      //     top: 0;
-      //     left: 0;
-      //     right: 0;
-      //     height: 130%;
-      //     position: absolute;
-      //     z-index: -1;
-      //     display: flex;
-      //     align-items: flex-end;
-      //     color: #fff;
-      //     padding-left: 20px;
-      //     font-weight: 700;
-      //     font-size: 15px;
-      //     line-height: 24px;
-      //     letter-spacing: 1px;
-      //   }
-      // }
-
-      &:hover {
-        opacity: 0.75;
-      }
-    }
-  }
-
   .image img {
     @media (max-width: 992px) {
       max-width: 100%;
       display: block;
       height: auto;
+    }
+  }
+}
+
+.app-btns {
+  @media (min-width: 1400px) {
+    width: 80%;
+  }
+
+  a {
+    transition: 0.3s;
+    width: 32%;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+    // &.app-store-btn {
+    //   position: relative;
+    //   z-index: 1;
+    //   &:after {
+    //     content: "COMING SOON...";
+    //     background: #4f4f4f;
+    //     border-radius: 9px;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 130%;
+    //     position: absolute;
+    //     z-index: -1;
+    //     display: flex;
+    //     align-items: flex-end;
+    //     color: #fff;
+    //     padding-left: 20px;
+    //     font-weight: 700;
+    //     font-size: 15px;
+    //     line-height: 24px;
+    //     letter-spacing: 1px;
+    //   }
+    // }
+
+    &:hover {
+      opacity: 0.75;
     }
   }
 }
@@ -498,10 +498,6 @@
     padding: 0;
   }
 }
-
-
-
-
 
 .search-btn {
   border-radius: 74px;
@@ -1404,8 +1400,6 @@
   display: flex;
 }
 
-
-
 // Footer
 footer {
   padding-top: 80px;
@@ -1554,5 +1548,61 @@ footer {
         }
       }
     }
+  }
+}
+
+// Search Page
+.download-hello-app {
+  p {
+    font-size: 24px;
+    @media (min-width: 992px) {
+      max-width: 385px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+      font-size: 20px;
+    }
+
+    @media #{$mobile} {
+      font-size: 17px;
+    }
+  }
+  .app-btns {
+    max-width: 480px;
+  }
+
+  .download-hello-app-content {
+    position: relative;
+
+    @media (min-width: 992px) {
+      &:after {
+        content: "";
+        position: absolute;
+        border-radius: 85px;
+        width: 75%;
+        height: 100%;
+        z-index: -1;
+        left: 11%;
+      }
+    }
+
+    &.lazyloaded {
+      &:after {
+        @media (min-width: 992px) {
+          background-image: url(../imgs/homepage/contact-widget-bg.png);
+          background-color: #fcf3eb;
+          top: -20px;
+        }
+      }
+    }
+  }
+
+  @media #{$maxTab} {
+    &.lazyloaded {
+      background-image: url(../imgs/homepage/contact-widget-bg.png);
+    }
+    background-color: #fcf3eb;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
   }
 }
