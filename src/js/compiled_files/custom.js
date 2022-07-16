@@ -101,7 +101,7 @@ $(document).ready(function () {
         }
       }, 1000);
     } else {
-      $("#error").show().delay(3000).fadeOut();
+      $("#phone-error").show().delay(3000).fadeOut();
     }
   });
 
@@ -110,12 +110,13 @@ $(document).ready(function () {
     function tick() {
       var counter = document.getElementById("countdown");
       seconds--;
-      counter.innerHTML = "00:" + (seconds < 10 ? "0" : "") + String(seconds);
+      counter.innerHTML = (seconds < 10 ? "0" : "") + String(seconds);
       if (seconds > 0) {
         setTimeout(tick, 1000);
       } else {
-        $(".verify-btn .counter").remove();
-        $('.verify-btn').attr("disabled", true)
+        $(".verify-btn").attr("disabled", true);
+        $("#resend-counter").hide();
+        $("#resend-again").show();
       }
     }
     tick();
@@ -138,10 +139,13 @@ $(document).ready(function () {
         } else if (this.hasOwnProperty("oldValue")) {
           // Rejected value - restore the previous one
           $(this).addClass("input-error");
-          this.setCustomValidity(errMsg);
+          // this.setCustomValidity(errMsg);
           this.reportValidity();
           this.value = this.oldValue;
           this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+
+          // show error message
+          $("#digits-error").show().delay(3000).fadeOut();
         } else {
           // Rejected value - nothing to restore
           this.value = "";
@@ -159,43 +163,41 @@ $(document).ready(function () {
     .each(function () {
       $(this).attr("maxlength", 1);
       $(this).on("keyup", function (e) {
-        // this.value = this.value.replace(/[^0-9]/g, '')
         var parent = $($(this).parent());
 
         if (e.keyCode === 8 || e.keyCode === 37) {
           var prev = parent.find("input#" + $(this).data("previous"));
           $(this).removeClass("valid");
+          $(".verify-btn").attr("disabled", true);
 
           if (prev.length) {
             $(prev).select();
           }
         } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
           var next = parent.find("input#" + $(this).data("next"));
-          $(this).addClass("valid");
 
-          if (next.length) {
-            $(next).select();
-          } else {
-            if (parent.data("autosubmit")) {
-              parent.submit();
+          $(this).addClass("valid");
+          if ($(this).val()) {
+            if (next.length) {
+              $(next).select();
+            } else {
+              if (parent.data("autosubmit")) {
+                var lastInput = $(".otp-form").find("input").last();
+                if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
+                  $(".verify-btn").attr("disabled", false);
+                }
+                // to submit the form please set data-autosubmit custom attribut to true and uncomment the bottom line of code
+                // parent.submit();
+              }
             }
           }
         }
       });
     });
+
+  $("#resend-again").click(function () {
+    $("#resend-again").hide();
+    countdown()
+    $("#resend-counter").show();
+  });
 });
-
-// // otp
-// let digitValidate = function (ele) {
-//   console.log(ele.value);
-//   ele.value = ele.value.replace(/[^0-9]/g, "");
-// };
-
-// let tabChange = function (val) {
-//   let ele = document.querySelectorAll(".otp-form input");
-//   if (ele[val - 1].value != "") {
-//     ele[val].focus();
-//   } else if (ele[val - 1].value == "") {
-//     ele[val - 2].focus();
-//   }
-// };
