@@ -25,7 +25,7 @@
         <img width="237" height="52" class="img-fluid logo" src="imgs/login/logo.svg" alt="logo" />
       </div>
       <div class="login-content">
-        <form class="login-form">
+        <form class="login-form d-none">
           <div class="form-top">
             <h2>Login / Sign Up</h2>
             <p class="login-txt">In order to login, you need to enter your phone number to get an OTP</p>
@@ -56,7 +56,7 @@
           </button>
         </form>
 
-        <div class="otp-content">
+        <div class="otp-content d-block">
           <div class="otp-top">
             <h2>OTP sent to <span class="tel" id="tel">"+20 100 019 3896"</span></h2>
             <p>Check out your phone and enter the OTP you received down below</p>
@@ -79,6 +79,7 @@
               </span>
             </p>
 						<form method="get" class="digit-group otp-form" data-group-name="digits" data-autosubmit="true" autocomplete="off">
+              <input autocomplete="false" name="hidden" type="text" style="display:none;">
 							<input type="text" maxlength=1 id="digit-1" name="digit-1" data-next="digit-2" />
 							<input type="text" maxlength=1 id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
 							<input type="text" maxlength=1 id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" />

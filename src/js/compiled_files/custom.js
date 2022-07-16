@@ -191,7 +191,8 @@ $(document).ready(function () {
             }
           }
         }
-      }).on('keyup', function() {
+      })
+      .on('keyup', function() {
         if (this.value.length == this.maxLength) {
           $(this).next('input').focus();
         }
