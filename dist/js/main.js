@@ -93,8 +93,8 @@ $(document).ready(function () {
 
   $(".login-wrapper .login-form").on("submit", function (e) {
     e.preventDefault();
-    var inputvalue = $("#mobile_code_login").val();
-    $("#tel").text(`"+${telInput.intlTelInput('getSelectedCountryData').dialCode} ${inputvalue}"`);
+    var inputvalue = telInput.intlTelInput("getNumber");
+    $("#tel").text(`"${inputvalue}"`);
     if (inputvalue != "" && telInput.intlTelInput("isValidNumber")) {
       $(this).find(".send-otp").addClass("loading").html("<span class='spinner mr-2'></span><span>Sending OTP...</span>");
       setTimeout(() => {
@@ -174,7 +174,7 @@ $(document).ready(function () {
           $(".verify-btn").attr("disabled", true);
 
           if (prev.length) {
-            $(prev).select();
+            $(prev).focus();
           }
         } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
           var next = parent.find("input#" + $(this).data("next"));
@@ -182,7 +182,7 @@ $(document).ready(function () {
           $(this).addClass("valid");
           if ($(this).val()) {
             if (next.length) {
-              $(next).select();
+              $(next).focus();
             } else {
               if (parent.data("autosubmit")) {
                 var lastInput = $(".otp-form").find("input").last();
