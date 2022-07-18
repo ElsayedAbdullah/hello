@@ -176,9 +176,9 @@ input:focus {
 }
 
 .iti--separate-dial-code .iti__selected-flag {
-  background: #f0f5f7;
-  border-radius: 105px;
-  padding: 8px;
+	background: #f0f5f7;
+	border-radius: 105px;
+	padding: 8px;
 }
 
 .iti--allow-dropdown input,
@@ -187,11 +187,15 @@ input:focus {
 .iti--separate-dial-code input,
 .iti--separate-dial-code input[type="text"],
 .iti--separate-dial-code input[type="tel"] {
-  margin-left: 10px;
+	margin-left: 10px;
 
-  @media #{$maxTab} {
-    font-size: 15px;
-  }
+	&::placeholder {
+		font-weight: normal;
+	}
+
+	@media #{$maxTab} {
+		font-size: 15px;
+	}
 }
 
 
