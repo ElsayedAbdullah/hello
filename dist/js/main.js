@@ -30,15 +30,15 @@ $(document).ready(function () {
     $(".dropdown-menu").removeClass("show");
   });
 
-  $('.download-app').on('click', function() {
-    $('.download-apps').addClass('active')
+  $(".download-app").on("click", function () {
+    $(".download-apps").addClass("active");
     $("body").addClass("overlay");
-  })
+  });
 
-  $('.download-apps .close').on('click', function() {
-    $('.download-apps').removeClass('active')
+  $(".download-apps .close").on("click", function () {
+    $(".download-apps").removeClass("active");
     $("body").removeClass("overlay");
-  })
+  });
 
   // menu toggle in navbar
   $(".hamburger").click(function () {
@@ -54,15 +54,24 @@ $(document).ready(function () {
   $("#navbarDropdown").on("click", function () {
     $("#dropdown-menu").toggleClass("show");
   });
+  $("#userDropdown").on("click", function () {
+    $(this).addClass("active");
+    $("#user-dropdown-menu").toggleClass("show");
+  });
 
   $(document).click(function () {
     $("#dropdown-menu,#dropdown-menu2").removeClass("show");
-    $(".download-apps").removeClass("active");
+    $(".download-apps,#userDropdown").removeClass("active");
   });
+
+  // get the first letter of each word of user name
+  var string = $("#userDropdown .name").text();
+  var name_chars = string.match(/\b(\w)/g).join("");
+  $("#userDropdown .name-chars").text(name_chars);
 
   /* Clicks within the dropdown won't make
      it past the dropdown itself */
-  $("#dropdown,#dropdown2").click(function (e) {
+  $("#lang-dropdown,#lang-dropdown2,#user-dropdown").click(function (e) {
     e.stopPropagation();
   });
 
@@ -89,7 +98,6 @@ $(document).ready(function () {
     initialCountry: "eg",
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
   });
-
 
   $(".login-wrapper .login-form").on("submit", function (e) {
     e.preventDefault();
@@ -195,12 +203,12 @@ $(document).ready(function () {
             }
           }
         }
-      })
+      });
     });
 
   $("#resend-again").click(function () {
     $("#resend-again").hide();
-    countdown()
+    countdown();
     $("#resend-counter").show();
   });
 });
