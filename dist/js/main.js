@@ -60,7 +60,7 @@ $(document).ready(function () {
   });
 
   $(document).click(function () {
-    $("#dropdown-menu,#dropdown-menu2").removeClass("show");
+    $("#dropdown-menu,#dropdown-menu2,#user-dropdown-menu").removeClass("show");
     $(".download-apps,#userDropdown").removeClass("active");
   });
 

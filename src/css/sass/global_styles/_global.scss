@@ -71,7 +71,7 @@ body {
 }
 
 body.overlay {
-	// overflow: hidden;
+	overflow: hidden;
 	transition: all 0.2s ease-in-out;
 }
 
@@ -82,7 +82,7 @@ body.overlay:after {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(#000, 0.5);
+	background-color: rgba(#2E2E3E, 0.8);
 	z-index: 4;
 	margin: 0;
 	overflow: hidden;
@@ -139,6 +139,10 @@ ul {
 		padding: 0 20px !important;
 		position: relative;
 	}
+}
+
+.w-100 {
+	width: 100%;
 }
 
 .hero-section {
