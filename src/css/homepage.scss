@@ -130,7 +130,6 @@
 
   .login,
   .download-app {
-    border-radius: 7px;
     font-weight: 700;
     font-size: 15px;
     line-height: 28px;
@@ -1804,6 +1803,7 @@ footer {
 
     &#userDropdown {
       background: none;
+      padding: 8px 16px;
 
       .name-chars {
         width: 32px;
@@ -2066,16 +2066,16 @@ footer {
         }
       }
 
+      p.title {
+        font-weight: 600;
+        font-size: 15px;
+
+        @media #{$mobile} {
+          font-size: 13px;
+        }
+      }
       .detail {
         width: 100%;
-        p.title {
-          font-weight: 600;
-          font-size: 15px;
-
-          @media #{$mobile} {
-            font-size: 13px;
-          }
-        }
 
         .value {
           font-weight: 600;
@@ -2164,7 +2164,7 @@ footer {
 
       @media #{$mobile} {
         width: 100%;
-        margin-top: 28px;
+        margin-top: 4px;
       }
 
       .header {
@@ -2296,6 +2296,7 @@ footer {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        background: transparent;
         transition: 0.2s;
 
         @media #{$mobile} {

@@ -15,7 +15,7 @@ $(document).ready(function () {
   $("#year-now").text(new Date().getFullYear());
 
   // stop propagation (closing navbar when click inside it) when click on navbar when the menu open in mobile screen
-  $(".navbar").on("click", function (e) {
+  $(".navbar,.download-apps").on("click", function (e) {
     e.stopPropagation();
   });
 
@@ -28,11 +28,13 @@ $(document).ready(function () {
 
   $(".download-app").on("click", function () {
     $(".download-apps").addClass("active");
+    $('.search-header').css("z-index", "1")
     $("body").addClass("overlay");
   });
 
   $(".download-apps .close").on("click", function () {
     $(".download-apps").removeClass("active");
+    $('.search-header').css("z-index", "6")
     $("body").removeClass("overlay");
   });
 
@@ -58,6 +60,7 @@ $(document).ready(function () {
   $(document).click(function () {
     $("#dropdown-menu,#dropdown-menu2,#user-dropdown-menu").removeClass("show");
     $(".download-apps,#userDropdown").removeClass("active");
+    $('.search-header').css("z-index", "6")
   });
 
   // get the first letter of each word of user name
