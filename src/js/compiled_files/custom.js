@@ -1,21 +1,27 @@
 $(document).ready(function () {
-  // when click in anywhere in document close the navbar menu and clear the overlay from the body
-  $("body").on("click", function (e) {
-    var $currEl = $(e.currentTarget);
-    if (!$currEl.is(".navbar") && !$currEl.closest(".navbar").length) {
-      $(".navbar .hamburger").removeClass("is-active");
-      $("body").removeClass("overlay");
-      $(".navbar").removeClass("bg-white");
-      $(".navbar-collapse").removeClass("active");
-      $(".download-apps").removeClass("active");
-    }
-  });
+  if ($(window).width() < 992) {
+    // when click in anywhere in document close the navbar menu and clear the overlay from the body
+    $("body").on("click", function (e) {
+      var $currEl = $(e.currentTarget);
+      if (!$currEl.is(".navbar") && !$currEl.closest(".navbar").length) {
+        $(".navbar .hamburger").removeClass("is-active");
+        $("body").removeClass("overlay");
+        $(".navbar").removeClass("bg-white");
+        $(".navbar-collapse").removeClass("active");
+        $(".download-apps").removeClass("active");
+      }
+    });
+
+    $(".navbar").on("click", function (e) {
+      e.stopPropagation();
+    });
+  }
 
   // make updating the year on footer
   $("#year-now").text(new Date().getFullYear());
 
   // stop propagation (closing navbar when click inside it) when click on navbar when the menu open in mobile screen
-  $(".navbar,.download-apps").on("click", function (e) {
+  $(".download-apps").on("click", function (e) {
     e.stopPropagation();
   });
 
@@ -28,13 +34,13 @@ $(document).ready(function () {
 
   $(".download-app").on("click", function () {
     $(".download-apps").addClass("active");
-    $('.search-header').css("z-index", "1")
+    $(".search-header").css("z-index", "1");
     $("body").addClass("overlay");
   });
 
   $(".download-apps .close").on("click", function () {
     $(".download-apps").removeClass("active");
-    $('.search-header').css("z-index", "6")
+    $(".search-header").css("z-index", "6");
     $("body").removeClass("overlay");
   });
 
@@ -60,13 +66,10 @@ $(document).ready(function () {
   $(document).click(function () {
     $("#dropdown-menu,#dropdown-menu2,#user-dropdown-menu").removeClass("show");
     $(".download-apps,#userDropdown").removeClass("active");
-    $('.search-header').css("z-index", "6")
+    $(".search-header").css("z-index", "6");
   });
 
-  // get the first letter of each word of user name
-  var string = $("#userDropdown .name").text();
-  var name_chars = string.match(/\b(\w)/g).join("");
-  $("#userDropdown .name-chars").text(name_chars);
+  
 
   /* Clicks within the dropdown won't make
      it past the dropdown itself */
@@ -87,127 +90,5 @@ $(document).ready(function () {
     $(".reviews .hidden-item").each(function () {
       $(this).toggleClass("d-none");
     });
-  });
-
-  // -----Country Code Selection
-  var telInput = $("#mobile_code_login");
-  telInput.intlTelInput({
-    separateDialCode: true,
-    preventInvalidNumbers: true,
-    initialCountry: "eg",
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
-  });
-
-  $(".login-wrapper .login-form").on("submit", function (e) {
-    e.preventDefault();
-    var inputvalue = telInput.intlTelInput("getNumber");
-    $("#tel").text(`"${inputvalue}"`);
-    if (inputvalue != "" && telInput.intlTelInput("isValidNumber")) {
-      $(this).find(".send-otp").addClass("loading").html("<span class='spinner mr-2'></span><span>Sending OTP...</span>");
-      setTimeout(() => {
-        $(".login-form").hide();
-        $(".otp-content").css("display", "flex");
-        if ($(".otp-content").is(":visible")) {
-          countdown();
-        }
-      }, 1000);
-    } else {
-      $("#phone-error").show().delay(3000).fadeOut();
-    }
-  });
-
-  function countdown() {
-    var seconds = 60;
-    function tick() {
-      var counter = document.getElementById("countdown");
-      seconds--;
-      counter.innerHTML = (seconds < 10 ? "0" : "") + String(seconds);
-      if (seconds > 0) {
-        setTimeout(tick, 1000);
-      } else {
-        $("#resend-counter").hide();
-        $("#resend-again").show();
-      }
-    }
-    tick();
-  }
-
-  // otp
-  // Restricts input for the set of matched elements to the given inputFilter function.
-  (function ($) {
-    $.fn.inputFilter = function (callback) {
-      return this.on("input keydown keyup mousedown mouseup select contextmenu drop focusout", function (e) {
-        if (callback(this.value)) {
-          // Accepted value
-          if (["keydown", "mousedown", "focusout"].indexOf(e.type) >= 0) {
-            $(this).removeClass("input-error");
-            this.setCustomValidity("");
-          }
-          this.oldValue = this.value;
-          this.oldSelectionStart = this.selectionStart;
-          this.oldSelectionEnd = this.selectionEnd;
-        } else if (this.hasOwnProperty("oldValue")) {
-          // Rejected value - restore the previous one
-          $(this).addClass("input-error");
-          // this.setCustomValidity(errMsg);
-          this.reportValidity();
-          this.value = this.oldValue;
-          this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-
-          // show error message
-          $("#digits-error").show().delay(3000).fadeOut();
-        } else {
-          // Rejected value - nothing to restore
-          this.value = "";
-        }
-      });
-    };
-  })(jQuery);
-
-  $(".otp-form input").inputFilter(function (value) {
-    return /^\d*$/.test(value); // Allow digits only, using a RegExp
-  }, "Only digits allowed");
-
-  $(".digit-group")
-    .find("input")
-    .each(function () {
-      $(this).attr("maxlength", 1);
-      $(this).on("keyup", function (e) {
-        var parent = $($(this).parent());
-
-        if (e.keyCode === 8 || e.keyCode === 37) {
-          var prev = parent.find("input#" + $(this).data("previous"));
-          $(this).removeClass("valid");
-          $(".verify-btn").attr("disabled", true);
-
-          if (prev.length) {
-            $(prev).select();
-          }
-        } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
-          var next = parent.find("input#" + $(this).data("next"));
-
-          $(this).addClass("valid");
-          if ($(this).val()) {
-            if (next.length) {
-              $(next).select();
-            } else {
-              if (parent.data("autosubmit")) {
-                var lastInput = $(".otp-form").find("input").last();
-                if (!lastInput.hasClass("input-error") && lastInput.hasClass("valid")) {
-                  $(".verify-btn").attr("disabled", false);
-                }
-                // to submit the form please set data-autosubmit custom attribut to true and uncomment the bottom line of code
-                // parent.submit();
-              }
-            }
-          }
-        }
-      });
-    });
-
-  $("#resend-again").click(function () {
-    $("#resend-again").hide();
-    countdown();
-    $("#resend-counter").show();
   });
 });

@@ -1,0 +1,37 @@
+@import "sass/global_styles/bootstrap-classes";
+@import "sass/global_styles/global";
+@import "sass/global_styles/header";
+@import "sass/global_styles/footer";
+
+.account-settings {
+  background-color: #f5f5f5;
+  padding: 60px 0 80px;
+  .profile-tabs {
+    li {
+      border-radius: 11px;
+      transition: 0.2s;
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: #000;
+      padding: 18px 32px;
+      cursor: pointer;
+      &.active,
+      &:hover {
+        background: #ffffff;
+        box-shadow: 0px 3px 6px rgba(76, 76, 108, 0.05);
+      }
+    }
+  }
+  .profile-content {
+    > div:not(:first-of-type) {
+      display: none;
+    }
+    .edit-profile {
+      background: #ffffff;
+      box-shadow: 0px 33px 90px rgba(76, 76, 108, 0.1);
+      border-radius: 25px;
+    }
+  }
+}
