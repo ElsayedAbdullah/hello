@@ -73,6 +73,13 @@
     background: #ddf1f6;
     border: 0;
     cursor: pointer;
+    &:hover {
+      background: #c2e6ef;
+      svg {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+
 
     @media #{$mobile} {
       width: 32px;
@@ -83,6 +90,7 @@
 
     svg {
       margin: auto;
+      transition: .2s;
 
       @media #{$mobile} {
         width: 12px;

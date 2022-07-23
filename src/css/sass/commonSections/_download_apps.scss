@@ -1,0 +1,192 @@
+.download-apps {
+  position: fixed;
+  background: #ffffff;
+  border-radius: 25px 0px 0px 25px;
+  width: 426px;
+  z-index: 99;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  padding: 60px 40px;
+  transform: translateX(100%);
+  transition: all 0.2s ease-out;
+  overflow: auto;
+  @media #{$maxTab} {
+    width: 260px;
+    padding: 60px 24px 0;
+  }
+
+  &.active {
+    transform: translateX(0);
+    box-shadow: -33px 0px 90px rgba(76, 76, 108, 0.2);
+  }
+
+  .close {
+    background: #ddf1f6;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 0;
+    display: flex;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background: #c2e6ef;
+      svg {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+    @media #{$maxTab} {
+      width: 32px;
+      height: 32px;
+      svg {
+        width: 13px;
+        height: auto;
+      }
+    }
+
+    svg {
+      margin: auto;
+      transition: 0.2s;
+    }
+  }
+
+  .description {
+    margin-right: 60px;
+    @media #{$maxTab} {
+      margin-right: 20px;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    @media #{$maxTab} {
+      font-size: 17px;
+      line-height: 27px;
+    }
+  }
+
+  .text {
+    font-size: 20px;
+    margin: 12px 0 32px;
+    @media #{$maxTab} {
+      margin: 12px 0 14px;
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+  .download-boxes {
+    @media #{$maxTab} {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .box-download {
+    background: #ffffff;
+    box-shadow: 0px 4px 30px rgba(76, 76, 108, 0.15);
+    border-radius: 15px;
+    padding: 16px 16px 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    @media #{$maxTab} {
+      flex-direction: column;
+      padding: 8px;
+      width: 100px;
+      border-radius: 7px;
+    }
+
+    &.app-store {
+      position: relative;
+      margin-bottom: 40px;
+
+      &:after {
+        content: "COMING SOON...";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 42% 100%);
+        background: #e9eef2;
+        height: 115px;
+        border-radius: 15px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #2c2ffe;
+        padding: 6px 30px;
+        box-sizing: border-box;
+        z-index: -1;
+        @media #{$maxTab} {
+          content: "SOON...";
+          clip-path: none;
+          justify-content: center;
+          font-size: 12px;
+          line-height: 12px;
+          border-radius: 7px;
+        }
+      }
+    }
+
+    .our-review {
+      @media (min-width: 992px) {
+        margin-right: 24px;
+      }
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 30px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        margin-right: 5px;
+      }
+      @media #{$maxTab} {
+        font-size: 17px;
+        line-height: 17px;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 15px;
+      color: #767e7f;
+      @media #{$maxTab} {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .app-btn {
+      transition: 0.2s;
+      @media #{$maxTab} {
+        img {
+          height: 24px;
+        }
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

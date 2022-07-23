@@ -1,21 +1,18 @@
 $(document).ready(function () {
-  if ($(window).width() < 992) {
-    // when click in anywhere in document close the navbar menu and clear the overlay from the body
-    $("body").on("click", function (e) {
-      var $currEl = $(e.currentTarget);
-      if (!$currEl.is(".navbar") && !$currEl.closest(".navbar").length) {
-        $(".navbar .hamburger").removeClass("is-active");
-        $("body").removeClass("overlay");
-        $(".navbar").removeClass("bg-white");
-        $(".navbar-collapse").removeClass("active");
-        $(".download-apps").removeClass("active");
-      }
-    });
-
-    $(".navbar").on("click", function (e) {
-      e.stopPropagation();
-    });
-  }
+  // when click in anywhere in document close the navbar menu and clear the overlay from the body
+  $("body").on("click", function (e) {
+    var $currEl = $(e.currentTarget);
+    if (!$currEl.is(".navbar") && !$currEl.closest(".navbar").length) {
+      $(".navbar .hamburger").removeClass("is-active");
+      $("body").removeClass("overlay");
+      $(".navbar").removeClass("bg-white");
+      $(".navbar-collapse").removeClass("active");
+      $(".download-apps").removeClass("active");
+    }
+  });
+  $(".navbar").on("click", function (e) {
+    e.stopPropagation();
+  });
 
   // make updating the year on footer
   $("#year-now").text(new Date().getFullYear());
@@ -32,7 +29,7 @@ $(document).ready(function () {
     $(".dropdown-menu").removeClass("show");
   });
 
-  $(".download-app").on("click", function () {
+  $("button.download-app").on("click", function () {
     $(".download-apps").addClass("active");
     $(".search-header").css("z-index", "1");
     $("body").addClass("overlay");
@@ -65,11 +62,9 @@ $(document).ready(function () {
 
   $(document).click(function () {
     $("#dropdown-menu,#dropdown-menu2,#user-dropdown-menu").removeClass("show");
-    $(".download-apps,#userDropdown").removeClass("active");
-    $(".search-header").css("z-index", "6");
+    // $(".download-apps,#userDropdown").removeClass("active");
+    // $(".search-header").css("z-index", "6");
   });
-
-  
 
   /* Clicks within the dropdown won't make
      it past the dropdown itself */
