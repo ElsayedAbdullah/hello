@@ -211,6 +211,9 @@
   &.footer-lang-dropdown {
     background: #f5f9fb;
     border-radius: 7px;
+    @media #{$maxTab} {
+      padding: 6px 10px;
+    }
   }
 }
 
