@@ -7,19 +7,20 @@
   padding: 60px 0 200px;
   background: #ecfbff;
   text-align: center;
-  @media #{$mobile} {
-    padding: 40px 0 50px;
+  @media #{$maxTab} {
+    padding: 40px 0 180px;
   }
   h1 {
-    font-weight: 700;
     font-size: 48px;
-    line-height: 58px;
     text-align: center;
     color: #000000;
     margin-bottom: 16px;
+    @media #{$tablet} {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
     @media #{$mobile} {
       font-size: 24px;
-      line-height: 34px;
       margin-bottom: 8px;
     }
   }
@@ -29,6 +30,9 @@
     line-height: 38px;
     text-align: center;
     color: #474c4d;
+    @media #{$tablet} {
+      font-size: 20px;
+    }
     @media #{$mobile} {
       font-size: 17px;
       line-height: 27px;
@@ -39,11 +43,21 @@
 
 .contact-form {
   margin-top: -150px;
+  padding-bottom: 100px;
+  @media #{$tablet} {
+    padding-bottom: 40px;
+  }
+  @media #{$mobile} {
+    padding-bottom: 20px;
+  }
   .contact-form-content {
     background: #ffffff;
     box-shadow: 0px 33px 90px rgba(76, 76, 108, 0.1);
     border-radius: 25px;
     padding: 60px;
+    @media #{$tablet} {
+      padding: 40px;
+    }
     @media #{$mobile} {
       padding: 24px 20px;
     }
@@ -77,6 +91,7 @@
     line-height: 24px;
     color: #000000;
     width: 100%;
+    display: block;
     @media #{$mobile} {
       padding: 11px 20px;
     }
@@ -87,6 +102,9 @@
   }
   textarea {
     min-height: 160px;
+    @media #{$mobile} {
+      min-height: 110px;
+    }
   }
   button {
     font-weight: 700;
@@ -95,5 +113,8 @@
     padding: 14px;
     color: #ffffff;
     width: 100%;
+    @media #{$mobile} {
+      padding: 10px;
+    }
   }
 }
