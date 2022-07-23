@@ -2,95 +2,95 @@
 
 /* arabic */
 @font-face {
-	font-family: "Cairo";
-	font-style: normal;
-	font-weight: 400;
-	src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
-	unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
 
 /* arabic */
 @font-face {
-	font-family: "Cairo";
-	font-style: normal;
-	font-weight: 600;
-	src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
-	unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
 
 /* arabic */
 @font-face {
-	font-family: "Cairo";
-	font-style: normal;
-	font-weight: 700;
-	src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
-	unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
 
 @font-face {
-	font-family: "Cairo";
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url(../fonts/Cairo_Regular.woff2) format("woff2");
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/Cairo_Regular.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-	font-family: "Cairo";
-	font-style: normal;
-	font-weight: 600;
-	font-display: swap;
-	src: url(../fonts/Cairo_Semi_Bold.woff2) format("woff2");
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/Cairo_Semi_Bold.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-	font-family: "Cairo";
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: url(../fonts/Cairo_Bold.woff2) format("woff2");
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/Cairo_Bold.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-weight: normal;
-	font-style: normal;
-	position: relative;
-	overflow-x: hidden;
-	color: #000;
-	background-color: #fff;
-	font-family: "Cairo", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  position: relative;
+  overflow-x: hidden;
+  color: #000;
+  background-color: #fff;
+  font-family: "Cairo", sans-serif;
 }
 
 body.overlay {
-	overflow: hidden;
-	transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
 
 body.overlay:after {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(#2E2E3E, 0.8);
-	z-index: 4;
-	margin: 0;
-	overflow: hidden;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(#2e2e3e, 0.8);
+  z-index: 4;
+  margin: 0;
+  overflow: hidden;
 }
 
 a {
-	text-decoration: none;
-	color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 h1,
@@ -99,89 +99,89 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 700;
-	line-height: 140%;
+  font-weight: 700;
+  line-height: 140%;
 }
 
 .main-btn,
 .main-btn {
-	background: #2c2ffe;
-	color: #fff;
-	border-radius: 7px;
-	border: 0;
-	transition: all 0.2s ease-in-out;
-	font-family: "Cairo", sans-serif;
-	cursor: pointer;
+  background: #2c2ffe;
+  color: #fff;
+  border-radius: 7px;
+  border: 0;
+  transition: all 0.2s ease-in-out;
+  font-family: "Cairo", sans-serif;
+  cursor: pointer;
 
-	&:hover {
-		background: #1e21e5;
-	}
+  &:hover {
+    background: #1e21e5;
+  }
 
-	&:active {
-		background: #494cff;
-	}
+  &:active {
+    background: #494cff;
+  }
 }
 
 p,
 li {
-	color: #474c4d;
-	line-height: 160%;
+  color: #474c4d;
+  line-height: 160%;
 }
 
 ul {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 @media #{$mobile} {
-	.container {
-		padding: 0 20px !important;
-		position: relative;
-	}
+  .container {
+    padding: 0 20px !important;
+    position: relative;
+  }
 }
 
 .w-100 {
-	width: 100%;
+  width: 100%;
 }
 
 .hero-section {
-	padding: 150px 0 100px;
+  padding: 150px 0 100px;
 
-	@media #{$maxTab} {
-		padding: 60px 0;
-	}
+  @media #{$maxTab} {
+    padding: 60px 0;
+  }
 
-	@media (min-width: 1200px) and (min-height: 601px) {
-		height: calc(100vh - 32px);
-		display: flex;
-		align-items: center;
-	}
+  @media (min-width: 1200px) and (min-height: 601px) {
+    height: calc(100vh - 32px);
+    display: flex;
+    align-items: center;
+  }
 
-	@media (min-height: 1000px) {
-		height: auto;
-		padding: 135px 0;
-	}
+  @media (min-height: 1000px) {
+    height: auto;
+    padding: 135px 0;
+  }
 
-	@media (max-height: 600px) {
-		height: auto;
-		padding: 80px 0;
-	}
+  @media (max-height: 600px) {
+    height: auto;
+    padding: 80px 0;
+  }
 }
 
 .flex-shrink-0 {
-	flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 button:focus,
 input:focus {
-	outline: none;
-	box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .iti--separate-dial-code .iti__selected-flag {
-	background: #f0f5f7;
-	border-radius: 105px;
-	padding: 8px;
+  background: #f0f5f7;
+  border-radius: 105px;
+  padding: 8px;
 }
 
 .iti--allow-dropdown input,
@@ -190,66 +190,65 @@ input:focus {
 .iti--separate-dial-code input,
 .iti--separate-dial-code input[type="text"],
 .iti--separate-dial-code input[type="tel"] {
-	margin-left: 10px;
+  margin-left: 10px;
 
-	&::placeholder {
-		font-weight: normal;
-	}
+  &::placeholder {
+    font-weight: normal;
+  }
 
-	@media #{$maxTab} {
-		font-size: 15px;
-	}
+  @media #{$maxTab} {
+    font-size: 15px;
+  }
 }
-
 
 .intl-tel-input,
 .iti {
-	width: 100%;
+  width: 100%;
 
-	@media #{$maxTab} {
-		background: #fff;
-		border-radius: 30px;
-	}
+  @media #{$maxTab} {
+    background: #fff;
+    border-radius: 30px;
+  }
 }
 
 .iti__arrow {
-	background-image: url(../imgs/arrow.svg);
-	border: 0;
-	width: 11px;
-	height: 7px;
-	background-repeat: no-repeat;
-	transition: 0.2s ease-in-out;
+  background-image: url(../imgs/arrow.svg);
+  border: 0;
+  width: 11px;
+  height: 7px;
+  background-repeat: no-repeat;
+  transition: 0.2s ease-in-out;
 }
 
 .iti__country-name,
 .iti__dial-code {
-	@media #{$mobile} {
-		font-size: 14px;
-	}
+  @media #{$mobile} {
+    font-size: 14px;
+  }
 }
 
 .iti__arrow--up {
-	transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .iti--allow-dropdown .iti__flag-container,
 .iti--separate-dial-code .iti__flag-container {
-	@media #{$maxTab} {
-		left: 6px;
-		bottom: 6px;
-		top: 6px;
-	}
+  @media #{$maxTab} {
+    left: 6px;
+    bottom: 6px;
+    top: 6px;
+  }
 }
 
 .iti--separate-dial-code .iti__selected-dial-code {
-	color: $primaryColor;
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 34px;
+  color: $primaryColor;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
 
-	@media #{$mobile} {
-		font-size: 15px;
-	}
+  @media #{$mobile} {
+    font-size: 15px;
+  }
 }
 
 .scrollbar {
@@ -303,65 +302,64 @@ input:focus {
 }
 
 .search {
-	.form-group {
-		background: #ffffff;
-		box-shadow: 0px 12px 50px rgba(76, 76, 108, 0.15);
-		border-radius: 79px;
-		padding: 8px;
-	
-		@media #{$mobile} {
-			background: none;
-			box-shadow: none;
-			flex-wrap: wrap;
-			padding: 0;
-		}
-	}
-	
-	.form-control {
-		display: block;
-		width: 100%;
-		padding: 15px 19px;
-		border: 0;
-		font-size: 18px;
-		line-height: 32px;
-		background: none;
-		font-weight: 600;
-	
-		@media #{$maxTab} {
-			padding: 12px 19px;
-		}
-	
-		&::placeholder {
-			color: #777c80;
-		}
-	}
-	
-	.form-control:focus {
-		color: #000;
-		outline: 0;
-	}
-	.search-btn {
-		border-radius: 74px;
-		padding: 14px 17px;
-		font-weight: 700;
-		font-size: 15px;
-		line-height: 28px;
-		border: 0;
-		cursor: pointer;
-		text-align: center;
-	
-		@media #{$mobile} {
-			width: 100%;
-			margin-top: 8px;
-			padding: 10px 17px;
-		}
-	}
+  .form-group {
+    background: #ffffff;
+    box-shadow: 0px 12px 50px rgba(76, 76, 108, 0.15);
+    border-radius: 79px;
+    padding: 8px;
+
+    @media #{$mobile} {
+      background: none;
+      box-shadow: none;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 15px 19px;
+    border: 0;
+    font-size: 18px;
+    line-height: 32px;
+    background: none;
+    font-weight: 600;
+
+    @media #{$maxTab} {
+      padding: 12px 19px;
+    }
+
+    &::placeholder {
+      color: #777c80;
+    }
+  }
+
+  .form-control:focus {
+    color: #000;
+    outline: 0;
+  }
+  .search-btn {
+    border-radius: 74px;
+    padding: 14px 17px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 28px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+
+    @media #{$mobile} {
+      width: 100%;
+      margin-top: 8px;
+      padding: 10px 17px;
+    }
+  }
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
-
 
 .section {
   padding: 100px 0;
@@ -435,4 +433,52 @@ button {
       }
     }
   }
+}
+
+.select2-container {
+  width: 100% !important;
+}
+.select2-container--default .select2-selection--single {
+  border: 1px solid #d7dee0;
+  box-shadow: 0px 3px 6px rgba(76, 76, 108, 0.06);
+  height: 58px;
+  border-radius: 7px;
+  @media #{$mobile} {
+    height: 48px;
+  }
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 58px;
+  padding-left: 24px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  @media #{$mobile} {
+    line-height: 48px;
+  }
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  b {
+    background-image: url(../imgs/profile/arrow.svg);
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    left: auto;
+    border: 0;
+  }
+}
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: unset;
+}
+.select2-dropdown {
+  border-color: #d7dee0;
+  background: #ffffff;
+  box-shadow: 0px 12px 22px rgba(76, 76, 108, 0.22);
+  border-radius: 7px;
+}
+.select2-results__option {
+	padding-left: 24px;
 }

@@ -1,0 +1,99 @@
+@import "sass/global_styles/bootstrap-classes";
+@import "sass/global_styles/global";
+@import "sass/global_styles/header";
+@import "sass/global_styles/footer";
+
+.contact-us {
+  padding: 60px 0 200px;
+  background: #ecfbff;
+  text-align: center;
+  @media #{$mobile} {
+    padding: 40px 0 50px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 16px;
+    @media #{$mobile} {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 8px;
+    }
+  }
+  p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: #474c4d;
+    @media #{$mobile} {
+      font-size: 17px;
+      line-height: 27px;
+      padding: 0 24px;
+    }
+  }
+}
+
+.contact-form {
+  margin-top: -150px;
+  .contact-form-content {
+    background: #ffffff;
+    box-shadow: 0px 33px 90px rgba(76, 76, 108, 0.1);
+    border-radius: 25px;
+    padding: 60px;
+    @media #{$mobile} {
+      padding: 24px 20px;
+    }
+  }
+  .form-group {
+    margin-bottom: 24px;
+    @media #{$mobile} {
+      margin-bottom: 20px;
+    }
+  }
+  label {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 10px;
+    display: block;
+    @media #{$mobile} {
+      margin-bottom: 6px;
+    }
+  }
+  input,
+  textarea {
+    background: #ffffff;
+    border: 1px solid #d7dee0;
+    box-shadow: 0px 3px 6px rgba(76, 76, 108, 0.06);
+    border-radius: 7px;
+    padding: 16px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000000;
+    width: 100%;
+    @media #{$mobile} {
+      padding: 11px 20px;
+    }
+    &::placeholder {
+      font-weight: normal;
+      color: #777c80;
+    }
+  }
+  textarea {
+    min-height: 160px;
+  }
+  button {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 28px;
+    padding: 14px;
+    color: #ffffff;
+    width: 100%;
+  }
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="keywords" content="Hello? Caller ID" />
+    <meta name="description" content="We are a team of like-minded people that work together to make you feel connected. We want to make sure that you will have best experience using our app. We don't give up easily. Follow us on social media to stay connected." />
+    <title>Hello? Caller ID</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="imgs/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Custom Style -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="search-header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a href="/" class="main-logo d-flex align-items-center">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C31.0457 0 40 8.9543 40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0Z" fill="#2C2FFE" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M26.8104 10.9716C24.7502 10.9716 22.4656 12.1619 22.4656 19.9095C22.4656 27.657 24.7493 28.8474 26.8104 28.8474C27.4701 28.8474 27.9273 28.676 28.2287 28.493C28.5372 28.3047 28.6858 27.9423 28.5946 27.5929C28.3662 26.7208 27.8743 24.8391 27.6464 23.9666C27.5716 23.6799 27.3472 23.46 27.0606 23.387L25.6071 23.0189C25.2817 22.9365 25.0413 22.6677 25.0004 22.3347C24.9296 21.7591 24.8339 20.814 24.8339 19.9086C24.8339 19.0031 24.9296 18.058 25.0004 17.4824C25.0413 17.1495 25.2817 16.8806 25.6071 16.7982L27.0606 16.4301C27.3477 16.3575 27.5725 16.1345 27.6473 15.8478L28.5937 12.2287C28.6849 11.8783 28.5363 11.5124 28.2264 11.3246C27.926 11.1416 27.4688 10.9711 26.8104 10.9716ZM13.1897 10.9716C12.5313 10.9711 12.0741 11.1416 11.7737 11.3246C11.4793 11.503 11.3304 11.8422 11.3945 12.176L11.4064 12.2287L12.3528 15.8478C12.4229 16.1166 12.6249 16.3294 12.8864 16.4147L12.9395 16.4301L14.393 16.7982C14.7184 16.8806 14.9588 17.1495 14.9997 17.4824C15.0705 18.058 15.1662 19.0031 15.1662 19.9086C15.1662 20.814 15.0705 21.7591 14.9997 22.3347C14.9609 22.6501 14.7431 22.9081 14.4436 23.0044L14.393 23.0189L12.9395 23.387C12.6529 23.46 12.4285 23.6799 12.3537 23.9666C12.1258 24.8391 11.6339 26.7208 11.4055 27.5929C11.3143 27.9423 11.4629 28.3047 11.7714 28.493C12.0728 28.676 12.53 28.8474 13.1897 28.8474C15.2508 28.8474 17.5345 27.657 17.5345 19.9095C17.5345 12.1619 15.2499 10.9716 13.1897 10.9716ZM20 18.6426C19.2503 18.6426 18.6425 19.2504 18.6425 20.0001C18.6425 20.7498 19.2503 21.3576 20 21.3576C20.7497 21.3576 21.3575 20.7498 21.3575 20.0001C21.3575 19.2504 20.7497 18.6426 20 18.6426Z" fill="white" />
+            </svg>
+            <span class="ml-2 d-none d-md-inline-block">Hello? Caller ID</span>
+          </a>
+
+          <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+            <div class="container nav-container">
+              <ul class="navbar-nav ml-auto mb-2 mb-lg-0 align-items-lg-center d-flex">
+                <li class="mr-lg-3 nav-item dropdown" id="user-dropdown">
+                  <button class="language-dropdown d-flex align-items-center justify-content-between" id="userDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="d-flex align-items-center justify-content-between justify-content-lg-center w-100">
+                      <span class="lang d-flex align-items-center">
+                        <span class="name-chars">--</span>
+                        <span class="mr-2 name">Bryan Thomas</span>
+                      </span>
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.0001 7.40001L0.600098 2.00001L2.0001 0.600006L6.0001 4.60001L10.0001 0.600006L11.4001 2.00001L6.0001 7.40001Z" fill="black" />
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu mb-screen" id="user-dropdown-menu" aria-labelledby="userDropdown">
+                    <li>
+                      <a class="dropdown-item nav-dropdown-item" href="#">
+                        <svg class="mr-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.0001 12.5C11.3808 12.5 12.5001 11.3807 12.5001 10C12.5001 8.61929 11.3808 7.5 10.0001 7.5C8.61935 7.5 7.50006 8.61929 7.50006 10C7.50006 11.3807 8.61935 12.5 10.0001 12.5Z" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M16.6667 10.0002C16.6657 9.52009 16.6132 9.04152 16.51 8.57266L18.7717 6.86016L17.105 3.9735L14.4858 5.0785C13.7766 4.42825 12.9347 3.93952 12.0183 3.646L11.6667 0.833496H8.33333L7.98167 3.646C7.06529 3.93952 6.22345 4.42825 5.51417 5.0785L2.895 3.9735L1.22833 6.86016L3.49 8.57266C3.28116 9.51287 3.28116 10.4875 3.49 11.4277L1.22833 13.1402L2.895 16.0268L5.51417 14.9218C6.22345 15.5721 7.06529 16.0608 7.98167 16.3543L8.33333 19.1668H11.6667L12.0183 16.3543C12.9347 16.0608 13.7766 15.5721 14.4858 14.9218L17.105 16.0268L18.7717 13.1402L16.51 11.4277C16.6132 10.9588 16.6657 10.4802 16.6667 10.0002V10.0002Z" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                        </svg>
+
+                        <span class="mr-2">Edit profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item nav-dropdown-item" href="#">
+                        <svg class="mr-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.87913 15.0718L5.17663 16.2334C4.56413 16.4968 4.16663 17.0993 4.16663 17.7659V19.1668H15.8333V17.7659C15.8333 17.0993 15.4358 16.4968 14.8233 16.2343L12.1141 15.0776" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" />
+                          <path d="M9.99992 4.16683C10.9204 4.16683 11.6666 3.42064 11.6666 2.50016C11.6666 1.57969 10.9204 0.833496 9.99992 0.833496C9.07944 0.833496 8.33325 1.57969 8.33325 2.50016C8.33325 3.42064 9.07944 4.16683 9.99992 4.16683Z" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M17.4999 8.33333C18.4204 8.33333 19.1666 7.58714 19.1666 6.66667C19.1666 5.74619 18.4204 5 17.4999 5C16.5794 5 15.8333 5.74619 15.8333 6.66667C15.8333 7.58714 16.5794 8.33333 17.4999 8.33333Z" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M2.49992 8.33333C3.42039 8.33333 4.16659 7.58714 4.16659 6.66667C4.16659 5.74619 3.42039 5 2.49992 5C1.57944 5 0.833252 5.74619 0.833252 6.66667C0.833252 7.58714 1.57944 8.33333 2.49992 8.33333Z" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M9.99996 15.8335C8.15913 15.8335 6.66663 14.341 6.66663 12.5002V11.6668C6.66663 9.826 8.15913 8.3335 9.99996 8.3335C11.8408 8.3335 13.3333 9.826 13.3333 11.6668V12.5002C13.3333 14.341 11.8408 15.8335 9.99996 15.8335Z" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                        </svg>
+
+                        <span class="mr-2">Manage Social Accounts</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item nav-dropdown-item" href="#">
+                        <svg class="mr-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.833252 5.8335H19.1666" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M0.833252 9.1665H19.1666" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M17.5 17.5H2.49998C1.57915 17.5 0.833313 16.7542 0.833313 15.8333V4.16667C0.833313 3.24583 1.57915 2.5 2.49998 2.5H13.3333H17.5C18.4208 2.5 19.1666 3.24583 19.1666 4.16667V15.8333C19.1666 16.7542 18.4208 17.5 17.5 17.5Z" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M4.16663 13.3335H8.33329" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M14.9999 13.3335H15.8333" stroke="black" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                        </svg>
+
+                        <span class="mr-2">Billing and Subscriptions</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item nav-dropdown-item logout" href="#">
+                        <svg class="mr-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.83337 10H18.3334" stroke="#CD1126" stroke-width="1.66667" stroke-miterlimit="10" />
+                          <path d="M14.1667 14.1668L18.3334 10.0002L14.1667 5.8335" stroke="#CD1126" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                          <path d="M11.6667 0.833496H1.66675V19.1668H11.6667" stroke="#CD1126" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="square" />
+                        </svg>
+
+                        <span class="mr-2">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mr-lg-3 nav-item dropdown" id="lang-dropdown">
+                  <button class="language-dropdown d-flex align-items-center justify-content-between" id="navbarDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="language d-lg-none">Language</span>
+                    <span class="d-flex align-items-center">
+                      <span class="lang d-flex align-items-center">
+                        <img class="img-fluid flag" src="imgs/us.png" alt="usa flag" />
+                        <span class="mr-2">English</span>
+                      </span>
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.0001 7.40001L0.600098 2.00001L2.0001 0.600006L6.0001 4.60001L10.0001 0.600006L11.4001 2.00001L6.0001 7.40001Z" fill="black" />
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu mb-screen" id="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item nav-dropdown-item active" href="#">
+                        <img class="img-fluid flag" src="imgs/us.png" alt="usa flag" />
+                        <span class="mr-2">English</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item nav-dropdown-item" href="#">
+                        <img class="img-fluid flag" src="imgs/sa.png" alt="usa flag" />
+                        <span class="mr-2">عربي</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="d-none d-lg-flex">
+                  <button class="download-app main-btn">Download App</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="d-lg-none d-flex align-items-center">
+            <div class="hamburger" id="hamburger-11" role="navigation" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="ToggleNavigation">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+            <button class="download-app main-btn">Download App</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <div class="contact-us">
+      <h1>Contact Us</h1>
+      <p>Please fill out these fields and let us know how we can help?</p>
+    </div>
+
+    <div class="contact-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 m-auto">
+            <div class="contact-form-content">
+              <form>
+                <div class="form-group">
+                  <label for="reason">Select a reason</label>
+                  <select name="reason" id="reason">
+                    <option value="new-feature">I’d like to request a new feature</option>
+                    <option value="have-quesiton">I have a question</option>
+                    <option value="feedback">I have feedback on the app</option>
+                    <option value="not-working">Something not working</option>
+                    <option value="payment">Payment</option>
+                    <option value="else">Something else</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="text" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                  <label for="msg">Message</label>
+                  <textarea name="msg" id="msg" placeholder="Enter your message here..."></textarea>
+                </div>
+                <button type="submit" class="main-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="footer-col">
+              <h5>
+                <a href="/" class="logo d-block">
+                  <img width="182" height="40" class="img-fluid d-block lazyload" data-src="imgs/homepage/footer-logo.svg" src="#" alt="logo" />
+                </a>
+              </h5>
+              <p>We are a team of like-minded people that work together to make you feel connected. We want to ensure that you will have best experience using our app.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="footer-col text-center">
+              <div class="d-lg-inline-block">
+                <h5 class="text-left">App Download</h5>
+                <ul class="footer-app-btns">
+                  <li>
+                    <a href="#" class="app-btn">
+                      <img width="152" height="44" class="img-fluid lazyload" data-src="imgs/homepage/google-play-btn.svg" src="#" alt="google-play-btn" />
+                    </a>
+                  </li>
+                  <li class="text-left">
+                    <img width="152" height="67" class="img-fluid lazyload d-block" data-src="imgs/homepage/app-store-btn.svg" src="#" alt="app-store-btn" />
+                  </li>
+                  <li>
+                    <a href="#" class="app-btn">
+                      <img width="152" height="44" class="img-fluid lazyload" data-src="imgs/homepage/huawei-app-gallery-btn.svg" src="#" alt="huawei-app-gallery-btn" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="footer-col">
+              <h5>Contact Info</h5>
+              <ul>
+                <li>
+                  Aknan Towers, Al-Salmiya, <br />
+                  Kuwait - 20010
+                </li>
+                <li>
+                  <a href="mailto:ask@hellocallers.com">ask@hellocallers.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="footer-col last">
+              <h5>Useful Links</h5>
+              <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 order-2 order-md-1">
+              <p class="copyright">&copy; <span id="year-now"></span> Hello? Caller ID</p>
+            </div>
+            <div class="col-md-6 order-1 order-md-2">
+              <div class="social-icons-parent d-flex align-items-center">
+                <ul class="social-icons d-flex align-items-center">
+                  <li>
+                    <a href="#">
+                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.25C11.55 1.475 11.1 1.55 10.575 1.625C11.1 1.325 11.475 0.875 11.625 0.275C11.175 0.575 10.65 0.725 10.05 0.875C9.6 0.425 8.925 0.125 8.25 0.125C6.975 0.125 5.85 1.25 5.85 2.6C5.85 2.825 5.85 2.975 5.925 3.125C3.9 3.05 2.025 2.075 0.825 0.575C0.6 0.95 0.525 1.325 0.525 1.85C0.525 2.675 0.975 3.425 1.65 3.875C1.275 3.875 0.9 3.725 0.525 3.575C0.525 4.775 1.35 5.75 2.475 5.975C2.25 6.05 2.025 6.05 1.8 6.05C1.65 6.05 1.5 6.05 1.35 5.975C1.65 6.95 2.55 7.7 3.675 7.7C2.85 8.375 1.8 8.75 0.6 8.75C0.375 8.75 0.225 8.75 0 8.75C1.125 9.425 2.4 9.875 3.75 9.875C8.25 9.875 10.725 6.125 10.725 2.9C10.725 2.825 10.725 2.675 10.725 2.6C11.25 2.225 11.7 1.775 12 1.25Z" fill="#2C2FFE" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5172 12L2.5 6.75H0.25V4.5H2.5V3C2.5 0.9756 3.75363 0 5.55954 0C6.42458 0 7.16805 0.0644025 7.38471 0.0931875V2.2088L6.13222 2.20937C5.15007 2.20937 4.9599 2.67607 4.9599 3.36093V4.5H7.75L7 6.75H4.95989V12H2.5172Z" fill="#2C2FFE" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 1.08075C7.602 1.08075 7.79175 1.0875 8.42475 1.116C8.80513 1.12057 9.18188 1.19059 9.5385 1.323C9.79934 1.41936 10.0352 1.57315 10.2285 1.773C10.4283 1.96634 10.5821 2.20216 10.6785 2.463C10.8109 2.81962 10.8809 3.19637 10.8855 3.57675C10.914 4.20975 10.9207 4.40175 10.9207 6.0015C10.9207 7.60125 10.914 7.79325 10.8855 8.42625C10.8809 8.80663 10.8109 9.18338 10.6785 9.54C10.5789 9.79883 10.4261 10.0339 10.23 10.23C10.0339 10.4261 9.79883 10.5789 9.54 10.6785C9.18338 10.8109 8.80663 10.8809 8.42625 10.8855C7.79325 10.914 7.60125 10.9207 6.0015 10.9207C4.40175 10.9207 4.20975 10.914 3.57675 10.8855C3.19637 10.8809 2.81962 10.8109 2.463 10.6785C2.20216 10.5821 1.96634 10.4283 1.773 10.2285C1.57315 10.0352 1.41936 9.79934 1.323 9.5385C1.19059 9.18188 1.12057 8.80513 1.116 8.42475C1.0875 7.79175 1.08075 7.59975 1.08075 6C1.08075 4.40025 1.0875 4.20825 1.116 3.57525C1.12057 3.19487 1.19059 2.81812 1.323 2.4615C1.41936 2.20066 1.57315 1.96484 1.773 1.7715C1.96634 1.57165 2.20216 1.41786 2.463 1.3215C2.81962 1.18909 3.19637 1.11907 3.57675 1.1145C4.20975 1.086 4.40175 1.07925 6.0015 1.07925M6 0C4.37025 0 4.16625 0.00675 3.525 0.036C3.02772 0.0461126 2.53575 0.140449 2.07 0.315C1.66947 0.465419 1.30673 0.7017 1.00725 1.00725C0.7017 1.30673 0.465419 1.66947 0.315 2.07C0.140449 2.53575 0.0461126 3.02772 0.036 3.525C0.00675 4.16625 0 4.37025 0 6C0 7.62975 0.00675 7.83375 0.036 8.475C0.0461126 8.97228 0.140449 9.46425 0.315 9.93C0.465419 10.3305 0.7017 10.6933 1.00725 10.9928C1.30673 11.2983 1.66947 11.5346 2.07 11.685C2.53622 11.8597 3.02871 11.9541 3.5265 11.964C4.16625 11.9932 4.37025 12 6 12C7.62975 12 7.83375 11.9932 8.475 11.964C8.97279 11.9541 9.46528 11.8597 9.9315 11.685C10.3301 11.5307 10.692 11.2949 10.9942 10.9927C11.2964 10.6905 11.5322 10.3286 11.6865 9.93C11.8612 9.46378 11.9556 8.97129 11.9655 8.4735C11.9948 7.83375 12.0015 7.62975 12.0015 5.9985C12.0015 4.36725 11.9948 4.16475 11.9655 3.5235C11.9547 3.02664 11.8599 2.53519 11.685 2.07C11.5346 1.66947 11.2983 1.30673 10.9928 1.00725C10.6933 0.7017 10.3305 0.465419 9.93 0.315C9.46425 0.140449 8.97228 0.0461126 8.475 0.036C7.83375 0.00675 7.62975 0 6 0Z" fill="#2C2FFE" />
+                        <path d="M5.99995 2.91895C5.39058 2.91895 4.7949 3.09964 4.28823 3.43819C3.78157 3.77673 3.38667 4.25792 3.15347 4.8209C2.92028 5.38388 2.85927 6.00336 2.97815 6.60102C3.09703 7.19867 3.39047 7.74766 3.82135 8.17854C4.25224 8.60943 4.80122 8.90286 5.39887 9.02174C5.99653 9.14063 6.61601 9.07961 7.17899 8.84642C7.74197 8.61322 8.22316 8.21833 8.5617 7.71166C8.90025 7.20499 9.08095 6.60931 9.08095 5.99995C9.08095 5.59534 9.00125 5.1947 8.84642 4.8209C8.69158 4.44709 8.46464 4.10745 8.17854 3.82135C7.89245 3.53525 7.5528 3.30831 7.17899 3.15347C6.80519 2.99864 6.40455 2.91895 5.99995 2.91895ZM5.99995 8.0002C5.60433 8.0002 5.21761 7.88288 4.88867 7.66309C4.55973 7.4433 4.30335 7.13091 4.15196 6.76541C4.00056 6.39991 3.96095 5.99773 4.03813 5.60972C4.11531 5.22171 4.30582 4.8653 4.58556 4.58556C4.8653 4.30581 5.22171 4.11531 5.60972 4.03813C5.99773 3.96095 6.39991 4.00056 6.76541 4.15196C7.13091 4.30335 7.4433 4.55973 7.66309 4.88867C7.88288 5.21761 8.0002 5.60433 8.0002 5.99995C8.0002 6.53044 7.78946 7.03922 7.41434 7.41434C7.03922 7.78945 6.53045 8.0002 5.99995 8.0002Z" fill="#2C2FFE" />
+                        <path d="M9.20242 3.51764C9.60007 3.51764 9.92242 3.19528 9.92242 2.79764C9.92242 2.39999 9.60007 2.07764 9.20242 2.07764C8.80478 2.07764 8.48242 2.39999 8.48242 2.79764C8.48242 3.19528 8.80478 3.51764 9.20242 3.51764Z" fill="#2C2FFE" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.475 0H0.525C0.225 0 0 0.225 0 0.525V11.55C0 11.775 0.225 12 0.525 12H11.55C11.85 12 12.075 11.775 12.075 11.475V0.525C12 0.225 11.775 0 11.475 0ZM3.525 10.2H1.8V4.5H3.6V10.2H3.525ZM2.7 3.75C2.1 3.75 1.65 3.225 1.65 2.7C1.65 2.1 2.1 1.65 2.7 1.65C3.3 1.65 3.75 2.1 3.75 2.7C3.675 3.225 3.225 3.75 2.7 3.75ZM10.2 10.2H8.4V7.425C8.4 6.75 8.4 5.925 7.5 5.925C6.6 5.925 6.45 6.675 6.45 7.425V10.275H4.65V4.5H6.375V5.25C6.6 4.8 7.2 4.35 8.025 4.35C9.825 4.35 10.125 5.55 10.125 7.05V10.2H10.2Z" fill="#2C2FFE" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <div class="position-relative" id="lang-dropdown2">
+                  <button class="language-dropdown footer-lang-dropdown d-flex align-items-center justify-content-between" id="footerDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="lang d-flex align-items-center">
+                      <img width="20" height="20" class="mr-2 img-fluid lazyload" data-src="imgs/homepage/us.png" src="#" alt="usa flag" />
+                      <span class="mr-2">English</span>
+                    </span>
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.0001 7.40001L0.600098 2.00001L2.0001 0.600006L6.0001 4.60001L10.0001 0.600006L11.4001 2.00001L6.0001 7.40001Z" fill="black" />
+                    </svg>
+                  </button>
+                  <ul class="dropdown-menu" id="dropdown-menu2" aria-labelledby="footerDropdown">
+                    <li>
+                      <a class="dropdown-item active" href="#">
+                        <img width="20" height="20" class="mr-2 img-fluid lazyload" data-src="imgs/homepage/us.png" src="#" alt="usa flag" />
+                        <span class="mr-2">English</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <img width="20" height="20" class="mr-2 img-fluid lazyload" data-src="imgs/homepage/sa.png" src="#" alt="saudi arabia flag" />
+                        <span class="mr-2">عربي</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#reason").select2({
+          minimumResultsForSearch: Infinity
+        });
+        // get the first letter of each word of user name
+        var string = $("#userDropdown .name").text();
+        var name_chars = string.match(/\b(\w)/g).join("");
+        $("#userDropdown .name-chars").text(name_chars);
+      });
+    </script>
+  </body>
+</html>
