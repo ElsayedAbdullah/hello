@@ -9,8 +9,9 @@
   right: 0;
   padding: 60px 40px;
   transform: translateX(100%);
-  transition: all 0.2s ease-out;
+  transition: all .4s cubic-bezier(.42, 0, .58, 1);
   overflow: auto;
+
   @media #{$maxTab} {
     width: 260px;
     padding: 60px 24px 0;
@@ -33,15 +34,19 @@
     top: 16px;
     cursor: pointer;
     transition: 0.2s;
+
     &:hover {
       background: #c2e6ef;
+
       svg {
         transform: rotate(180deg) scale(1.1);
       }
     }
+
     @media #{$maxTab} {
       width: 32px;
       height: 32px;
+
       svg {
         width: 13px;
         height: auto;
@@ -56,6 +61,7 @@
 
   .description {
     margin-right: 60px;
+
     @media #{$maxTab} {
       margin-right: 20px;
     }
@@ -65,6 +71,7 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 38px;
+
     @media #{$maxTab} {
       font-size: 17px;
       line-height: 27px;
@@ -74,12 +81,14 @@
   .text {
     font-size: 20px;
     margin: 12px 0 32px;
+
     @media #{$maxTab} {
       margin: 12px 0 14px;
       font-size: 15px;
       line-height: 25px;
     }
   }
+
   .download-boxes {
     @media #{$maxTab} {
       display: flex;
@@ -132,6 +141,7 @@
         padding: 6px 30px;
         box-sizing: border-box;
         z-index: -1;
+
         @media #{$maxTab} {
           content: "SOON...";
           clip-path: none;
@@ -157,9 +167,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       span {
         margin-right: 5px;
       }
+
       @media #{$maxTab} {
         font-size: 17px;
         line-height: 17px;
@@ -170,6 +182,7 @@
       font-weight: 600;
       font-size: 15px;
       color: #767e7f;
+
       @media #{$maxTab} {
         font-size: 13px;
         margin-bottom: 12px;
@@ -178,6 +191,7 @@
 
     .app-btn {
       transition: 0.2s;
+
       @media #{$maxTab} {
         img {
           height: 24px;

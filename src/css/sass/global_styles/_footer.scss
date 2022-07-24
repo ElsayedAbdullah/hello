@@ -42,7 +42,7 @@ footer {
       }
 
       @media #{$mobile} {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-size: 15px;
       }
 
@@ -149,8 +149,8 @@ footer {
         }
 
         > a {
-          width: 28px;
-          height: 28px;
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
           background: #dfe0ff;
           display: flex;

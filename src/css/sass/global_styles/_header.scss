@@ -290,8 +290,9 @@
       }
     }
 
+    
+
     &.active {
-      background: #f5f9fb;
       position: relative;
 
       &:after {
@@ -317,7 +318,7 @@
     }
 
     &:hover {
-      background: #d6effb;
+      background: #f5f9fb;
     }
   }
 }

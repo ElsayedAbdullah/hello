@@ -10,26 +10,37 @@ $(document).ready(function () {
       $(".download-apps").removeClass("active");
     }
   });
-  $(".navbar").on("click", function (e) {
+  $(".navbar,.download-apps").on("click", function (e) {
     e.stopPropagation();
+    $("#dropdown-menu,#user-dropdown-menu").removeClass("show");
+  });
+
+  // if($(window).width() < 992) {
+  // }
+
+  $("input[type=text]").on("focus",function () {
+    $(this).parents('.search-container').addClass("focus");
+  });
+  $("input[type=text]").on("blur",function () {
+    $(this).parents('.search-container').removeClass("focus");
   });
 
   // make updating the year on footer
   $("#year-now").text(new Date().getFullYear());
 
-  // stop propagation (closing navbar when click inside it) when click on navbar when the menu open in mobile screen
-  $(".download-apps").on("click", function (e) {
-    e.stopPropagation();
-  });
-
   // language dropdown
   $(".dropdown-menu a").on("click", function () {
-    $(this).addClass("active").parent().siblings().find("a").removeClass("active");
+    $(this)
+      .addClass("active")
+      .parent()
+      .siblings()
+      .find("a")
+      .removeClass("active");
     // $(".language-dropdown .lang").html($(this).html());
     $(".dropdown-menu").removeClass("show");
   });
 
-  $("button.download-app").on("click", function () {
+  $("li#download-app").on("click", function () {
     $(".download-apps").addClass("active");
     $(".search-header").css("z-index", "1");
     $("body").addClass("overlay");
@@ -54,10 +65,12 @@ $(document).ready(function () {
   });
   $("#navbarDropdown").on("click", function () {
     $("#dropdown-menu").toggleClass("show");
+    $("#user-dropdown-menu").removeClass("show");
   });
   $("#userDropdown").on("click", function () {
     $(this).addClass("active");
     $("#user-dropdown-menu").toggleClass("show");
+    $("#dropdown-menu").removeClass("show");
   });
 
   $(document).click(function () {
