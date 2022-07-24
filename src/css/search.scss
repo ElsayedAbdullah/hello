@@ -100,6 +100,7 @@
 
   &.spam {
     background: #ffeef0;
+
     h2 span {
       color: #cd1126;
     }
@@ -229,9 +230,11 @@
 
     .name-detail {
       margin-left: 32px;
+
       @media #{$tablet} {
         margin-left: 20px;
       }
+
       @media #{$mobile} {
         margin: 12px 0 20px;
       }
@@ -244,11 +247,13 @@
       width: 96px;
       height: 96px;
       border-radius: 50%;
+
       img {
         border-radius: 50%;
         display: block;
         width: 100%;
       }
+
       .certified {
         position: absolute;
         bottom: 0;
@@ -261,17 +266,20 @@
       font-size: 20px;
       line-height: 38px;
       color: #ffffff;
+
       @media #{$mobile} {
         font-size: 15px;
         line-height: 25px;
       }
     }
+
     .spam-reports {
       font-weight: 600;
       font-size: 15px;
       line-height: 25px;
       color: #ffffff;
     }
+
     .business-profile {
       font-weight: 600;
       font-size: 15px;
@@ -363,6 +371,7 @@
           font-size: 13px;
         }
       }
+
       .bio {
         .bio-text {
           padding: 20px;
@@ -378,6 +387,7 @@
             color: #000000;
           }
         }
+
         .show-more {
           font-weight: 600;
           font-size: 15px;
@@ -389,6 +399,7 @@
           cursor: pointer;
         }
       }
+
       .detail {
         width: 100%;
 
@@ -521,6 +532,7 @@
           display: flex;
           align-items: center;
           font-weight: 600;
+          position: relative;
 
           @media #{$mobile} {
             font-size: 13px;
@@ -538,15 +550,27 @@
             }
 
             .tooltiptext {
-              left: -25px;
+              left: 50px;
               min-width: 130px;
               text-align: center;
+              right: auto;
+              top: -3px;
+
+              &::after {
+                border-color: transparent #3E3E64 transparent transparent;
+                display: block;
+                left: -15px;
+                transform: translateY(-50%);
+                z-index: 1;
+                top: 50%;
+                bottom: auto;
+              }
             }
 
             &:hover .tooltiptext {
               opacity: 1;
               visibility: visible;
-              top: 70px;
+              left: 45px;
             }
           }
         }
@@ -560,14 +584,14 @@
       opacity: 0;
       visibility: hidden;
       transition: all 0.2s ease-in-out;
-      background: #ffffff;
-      box-shadow: 0px 16px 30px rgb(76, 76, 108, 0.14);
+      background: #3E3E64;
+      box-shadow: 0px 16px 30px rgba(76, 76, 108, 0.4);
       border-radius: 7px;
       padding: 3px 12px;
       font-weight: 600;
       font-size: 15px;
       line-height: 25px;
-      color: #000000;
+      color: #fff;
       min-width: 120px;
       right: -50px;
 
@@ -576,7 +600,7 @@
         position: absolute;
         border-width: 8px;
         border-style: solid;
-        border-color: #fff transparent transparent transparent;
+        border-color: #3E3E64 transparent transparent transparent;
         display: block;
         bottom: -16px;
         left: 50%;
