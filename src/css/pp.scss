@@ -1,0 +1,140 @@
+@import "sass/global_styles/bootstrap-classes";
+@import "sass/global_styles/global";
+@import "sass/global_styles/header";
+@import "sass/global_styles/footer";
+
+.pp-banner {
+  padding: 60px 0 200px;
+  background: #ecfbff;
+  text-align: center;
+  @media #{$maxTab} {
+    padding: 40px 0 180px;
+  }
+  h1 {
+    font-size: 48px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 16px;
+    @media #{$tablet} {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    @media #{$mobile} {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  }
+  p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: #474c4d;
+    @media #{$tablet} {
+      font-size: 20px;
+    }
+    @media #{$mobile} {
+      font-size: 17px;
+      line-height: 27px;
+      padding: 0 24px;
+    }
+  }
+}
+
+.pp-content {
+  margin-top: -150px;
+  padding-bottom: 100px;
+  @media #{$tablet} {
+    padding-bottom: 40px;
+  }
+  @media #{$mobile} {
+    padding-bottom: 20px;
+  }
+  .pp-text {
+    background: #ffffff;
+    box-shadow: 0px 33px 90px rgba(76, 76, 108, 0.1);
+    border-radius: 25px;
+    padding: 60px;
+    @media #{$tablet} {
+      padding: 40px;
+    }
+    @media #{$mobile} {
+      padding: 24px 20px;
+    }
+  }
+  .topic {
+    margin-bottom: 45px;
+    @media #{$tablet} {
+      margin-bottom: 35px;
+    }
+    @media #{$mobile} {
+      margin-bottom: 25px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 28px;
+      color: #000000;
+      margin-bottom: 20px;
+      @media #{$tablet} {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+      @media #{$mobile} {
+        font-size: 17px;
+        margin-bottom: 12px;
+      }
+    }
+    p {
+      font-size: 20px;
+      @media #{$tablet} {
+        font-size: 16px;
+      }
+      @media #{$mobile} {
+        font-size: 15px;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+        @media #{$tablet} {
+          margin-bottom: 15px;
+        }
+        @media #{$mobile} {
+          margin-bottom: 12px;
+        }
+      }
+      strong {
+        color: #333;
+      }
+      a {
+        font-weight: 600;
+        color: #2c2ffe;
+        transition: 0.2s;
+        &:hover {
+          text-decoration: underline;
+          color: #00f;
+        }
+      }
+    }
+    ul {
+      margin-bottom: 20px;
+      padding-left: 30px;
+      @media #{$maxTab} {
+        padding-left: 20px;
+        margin-bottom: 12px;
+      }
+      li {
+        font-size: 20px;
+        list-style: square;
+        @media #{$tablet} {
+          font-size: 16px;
+        }
+        @media #{$mobile} {
+          font-size: 15px;
+        }
+        &::marker {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
